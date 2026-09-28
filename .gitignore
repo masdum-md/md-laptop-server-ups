@@ -1,0 +1,22 @@
+# Environment variables and secrets / Variabel konfigurasi & data rahasia
+.env
+
+# Python virtual environment / Direktori virtual environment Python
+venv/
+env/
+ENV/
+
+# Python cache & compiled files / Berkas cache & kompilasi Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs / Berkas catatan aktivitas
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS specific files / Berkas sistem operasi
+.DS_Store
+Thumbs.db
