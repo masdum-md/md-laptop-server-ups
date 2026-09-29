@@ -114,8 +114,11 @@ def main():
                     f"🔋 Kapasitas Baterai: *{current_pct}%*\n"
                     "☕ Lanjut ngopi bosku."
                 )
-            notify_telegram(msg)
-            last_state = current_state
+            success = notify_telegram(msg)
+            if success:
+                last_state = current_state
+            else:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] [WARN] Notifikasi perubahan status gagal terkirim. Akan dicoba ulang pada iterasi berikutnya.")
 
         time.sleep(POLL_INTERVAL)
 

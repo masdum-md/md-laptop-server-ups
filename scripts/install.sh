@@ -39,7 +39,8 @@ echo "[*] Menulis konfigurasi service Systemd..."
 cat <<EOF > $SERVICE_FILE
 [Unit]
 Description=MD Laptop Server UPS (Telegram Power Monitor)
-After=network.target
+After=network.target network-online.target
+Wants=network-online.target
 
 [Service]
 Type=simple
