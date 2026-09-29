@@ -2,6 +2,9 @@
 # Script cepat untuk menjalankan daemon di lingkungan pengembangan (Development)
 # Quick script to run the daemon in a development environment
 
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd "$SCRIPT_DIR"
+
 echo "[*] Memulai MD-UPS Monitor secara manual..."
 
 # Periksa apakah virtual environment ada
